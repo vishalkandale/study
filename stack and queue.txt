@@ -1,0 +1,467 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct stack
+{
+    int *a;
+    int top;
+    int maxSize;
+};
+
+void initstack(struct stack * p,int maxSize);
+void push(struct stack * p,int item);
+void display(struct stack p);
+int pop(struct stack * p);
+void printMenu();
+
+int main()
+{
+    struct stack p;
+    int data,ch,data1,m;
+    printf("Enter the maximum size of the stack");
+    scanf("%d",&m);
+    initstack(&p,m);
+    do
+    {
+        printMenu();
+        printf("Enter your choice");
+        scanf("%d",&ch);
+        switch(ch)
+        {
+            case 1:
+                  printf("Enter the element to be pushed\n");
+                  scanf("%d",&data);
+                  push(&p,data);
+                  break;
+            case 2:
+                  data1=pop(&p);
+                  if(data1!=-1000)
+                  {
+                      printf("The popped element is %d\n",data1);
+                  }
+                  break;
+            case 3:
+                printf("The contents of the stack are");
+                display(p);
+                printf("\n");
+                break;
+            default :
+                return 0;
+        }
+    }while(1);
+    return 0;
+}
+
+
+
+void printMenu()
+{
+    printf("Choice 1 : Push\n");
+    printf("Choice 2 : Pop\n");
+    printf("Choice 3 : Display\n");
+    printf("Any other choice : Exit\n");
+}
+
+void initstack(struct stack * p,int maxSize)
+{
+    p->a=(int*)malloc(maxSize*sizeof(int));
+    p->top=-1;
+    p->maxSize=maxSize;
+}
+
+void push(struct stack * p,int item)
+{
+    if(p->top==p->maxSize-1)
+    {
+        printf("Stack is full\n");
+        return;
+    }
+    p->top++;
+    p->a[p->top]=item;
+}
+
+void display(struct stack p)
+{
+    int i;
+    if(p.top==-1)
+    {
+        printf(" {}");
+    }
+    else
+    {
+        for(i=0;i<=p.top;i++)
+        {
+            printf(" %d",p.a[i]);
+        }
+    }
+}
+
+
+int pop(struct stack * p)
+{
+    if(p->top==-1)
+    {
+        printf("Stack is empty\n");
+        return -1000;
+    }
+    return p->a[p->top--];
+}
+
+----------------------------------------------------
+2
+
+#include<stdio.h>
+#include<stdlib.h>
+
+struct node
+{
+    int data;
+    struct node* link;
+};
+
+void push(struct node **q,int num)
+{
+    struct node * new_node=(struct node*)malloc(sizeof(struct node));
+    new_node->data=num;
+    if(*q==NULL)
+    {
+        new_node->link=NULL;
+    }
+    else
+    {
+        new_node->link=*q;
+    }
+    *q=new_node;
+
+}
+void display(struct node *q)
+{
+    if(q==NULL)
+    {
+        printf(" {}");
+    }
+    else
+    {
+        struct node *temp=q;
+        while(temp->link!=NULL)
+        {
+            printf(" %d",temp->data);
+            temp=temp->link;
+        }
+        printf(" %d",temp->data);
+    }
+    printf("\n");
+}
+
+int pop(struct node **q)
+{
+    int n;
+    if(*q==NULL)
+    {
+        return -1000;
+    }
+    else
+    {
+        struct node * temp=*q;
+        n=temp->data;
+        *q=temp->link;
+        free(temp);
+    }
+    return n;
+}
+
+
+
+int main()
+{
+    struct node *q=NULL;
+    int ch,value,val;
+    while(1)
+    {
+        printf("Choice 1 : Push\n");
+        printf("Choice 2 : Pop\n");
+        printf("Choice 3 : Display\n");
+        printf("Any other choice  : Exit\n");
+        printf("Enter your choice\n");
+        scanf("%d",&ch);
+        switch(ch)
+        {
+            case 1:
+                printf("Enter the element to be pushed\n");
+                scanf("%d",&value);
+                push(&q,value);
+                break;
+            case 2:
+                val=pop(&q);
+                if(val==-1000)
+                {
+                    printf("Stack is empty\n");
+                }
+                else
+                {
+                    printf("The popped element is %d\n",val);
+                }
+                break;
+            case 3:
+                printf("The contents of the stack are");
+                display(q);
+                break;
+            default:
+                exit(0);
+        }
+   }
+   return 0;
+}
+
+-----------------------------------------
+3
+
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+struct stack {
+    char *s;
+    int top;
+};
+void initstack(struct stack * p){
+    p->top = -1;
+    p->s = (char *)malloc(128 * sizeof(char));
+}
+void push(struct stack *p, char item){
+    p->s[++(p->top)] = item;
+}
+
+char pop(struct stack *p){
+    return p->s[(p->top)--];    
+}
+
+void balancedornot(struct stack p, char *par){
+    int i;
+    initstack(&p);
+    for(i = 0; i < strlen(par); i++){
+        if(par[i] == ')'){
+            if(pop(&p) != '('){
+                printf("No\n");
+                return;
+            }
+                
+        }else if(par[i] == ']'){
+            if(pop(&p) != '['){
+                printf("No\n");
+                return;
+            }
+        }else{
+            push(&p, par[i]);
+        }
+    }
+    printf("%s\n", (p.top == -1) ? "Yes" : "No");
+}
+
+int main(){
+    int n;
+    char s[100];
+    scanf("%d",&n);
+    
+    struct stack st;
+    
+    while(n){
+        scanf("%s",s);
+        balancedornot(st, s);
+        n--;
+    }
+    return 0;
+}
+
+----------------------------------------------
+4
+
+#include<stdio.h>
+
+struct queue {
+    int contents[5];
+    int front;
+    int count;
+};
+void  initQueue (struct queue *q){
+    q->front = 0;
+    q->count = 0;
+}
+void enQueue (struct queue *q, int element){
+    if(q->count == 5){
+        printf("Queue is full\n");
+    }else{
+        q->contents[(q->front + q->count) % 5] = element;
+        q->count++; 
+    }
+}
+
+int deQueue (struct queue *q){
+    if(q->count == 0){
+        printf("Queue is empty\n");
+        return -1000;
+    }
+    int temp = q->contents[q->front];
+    q->front = (q->front + 1) % 5;
+    q->count--;
+    return temp;
+        
+}
+void display (struct queue q){
+    if(q.count == 0){
+        printf(" {}\n");
+        return;
+    }
+    int i;
+    for(i = 0; i < q.count; i++)
+        printf(" %d",q.contents[(q.front + i) % 5]);
+    printf("\n");    
+}
+
+int main(){
+    int n, choice;
+    struct queue q;
+    initQueue(&q);
+    do{
+        printf("Choice 1 : Enter element into Queue\nChoice 2 : Delete element from Queue\nChoice 3 : Display\nAny other choice : Exit\nEnter your choice\n");
+        scanf("%d",&choice);
+        
+        switch(choice){
+            case 1:
+                printf("Enter the element to be inserted/entered\n");
+                scanf("%d",&n);
+                enQueue(&q,n);
+            break;
+            case 2:
+                n = deQueue(&q);
+                if(n != -1000)
+                    printf("The deleted element is %d\n",n);
+            break;
+            case 3:
+                printf("The contents of the queue are");
+                display(q);
+            break;
+        }
+    }while(choice > 0 && choice < 4);
+    return 0;
+}
+-----------------------------------------------
+5
+
+#include<stdio.h>
+#include<stdlib.h>
+
+struct node{
+    int data;
+    struct node* link;
+};
+
+void addcirq(struct node **f,struct node **r,int item)
+{
+    struct node * new_node=(struct node*)malloc(sizeof(struct node));
+    new_node->data=item;
+    new_node->link=NULL;
+    if((*f==NULL)&&(*r==NULL))
+    {
+        *f=new_node;
+        *r=new_node;
+        struct node *temp=*r;
+        temp->link=*f;
+    }
+    else
+    {
+        struct node *temp=*r;
+        temp->link=new_node;
+        *r=new_node;
+        new_node->link=*f;
+    }
+}
+
+int delcieq(struct node **f,struct node **r)
+{
+    int n;
+    struct node *temp=*f;
+    if(*f==NULL && *r==NULL)
+    {
+        return -1000;
+    }
+    else if(*f==*r)
+    {
+        *f=NULL;
+        *r=NULL;
+        n=temp->data;
+    }
+    else
+    {
+        struct node *Temp=*r;
+        *f=temp->link;
+        Temp->link=*f;
+        n=temp->data;
+    }
+    return n;
+}
+
+void cirq_display(struct node *f)
+{
+    if(f==NULL)
+    {
+        printf(" {}");
+    }
+    else
+    {
+        struct node *temp=f;
+        do
+        {
+            printf(" %d",temp->data);
+            temp=temp->link;
+        }while(temp!=f);
+    }
+    printf("\n");
+}
+
+void printMenu()
+{
+    printf("Choice 1 : Enter element into Queue\n");
+    printf("Choice 2 : Delete element from Queue\n");
+    printf("Choice 3 : Display\n");
+    printf("Any other choice : Exit\n");
+}
+
+int main()
+{
+    struct node *f=NULL;
+    struct node *r=NULL;
+    int ch,value;
+    while(1)
+    {
+        printMenu();
+        printf("Enter your choice\n");
+        scanf("%d",&ch);
+        if(ch==1)
+        {
+            printf("Enter the element to be inserted/entered\n");
+            scanf("%d",&value);
+            addcirq(&f,&r,value);
+        }
+        else if(ch==2)
+        {
+            int n=delcieq(&f,&r);
+            if(n==-1000)
+            {
+                printf("Queue is empty");
+            }
+            else
+                printf("The deleted element is %d\n",n);
+        }
+        else if(ch==3)
+        {
+            printf("The contents of the queue are");
+            cirq_display(f);
+        }
+        else
+        {
+            break;
+        }
+        
+    }
+    return 0;
+}
