@@ -1,0 +1,8 @@
+
+1.Create new python file program_code.py
+3.copy code and paste it
+2.pip install pandas
+3.run
+
+
+code link: https://stackoverflow.com/questions/60044233/converting-excel-into-json-using-python
