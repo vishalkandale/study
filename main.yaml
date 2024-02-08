@@ -1,0 +1,132 @@
+
+#===================================================== Pipeline triggers ==========================================
+trigger:
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - CICD/*
+stages:
+#===================================================== Build Pipeline =============================================
+    - stage: Build
+      displayName: Build     
+      jobs:
+      - job : linux_agent_job 
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+        #===== Install Terraform 1.5.2 =====
+        - task: ms-devlabs.custom-terraform-tasks.custom-terraform-installer-task.TerraformInstaller@0
+          displayName: 'Install Terraform 1.5.2'
+          inputs:
+            terraformVersion: '1.5.2'
+            terraformDownloadLocation: 'https://releases.hashicorp.com/terraform'
+        #===== Azure Key Vault =====
+        - task: AzureKeyVault@2
+          displayName: 'Key Vault Connection'
+          inputs:
+            azureSubscription: 'NewServiceConnection'
+            KeyVaultName: 'KeyForFirstrProject1'
+            SecretsFilter: "*"
+            RunAsPreJob: true
+        #===== Terraform Init =====
+        - task: ms-devlabs.custom-terraform-tasks.custom-terraform-release-task.TerraformTaskV3@3
+          displayName: 'Terraform  init'
+          inputs:
+            command: 'init'
+            provider: 'azurerm'
+            commandOptions: '-input=false'
+            workingDirectory: terraform/source
+            backendServiceArm: 'NewServiceConnection'
+            backendAzureRmResourceGroupName: 'MyRESOURCE'
+            backendAzureRmStorageAccountName: mystorageaccounterraform
+            backendAzureRmContainerName: 'tfstate'
+            backendAzureRmKey: 'tf/terraform.tfstate'
+        #===== 'Terraform validate ' =====
+        - task: ms-devlabs.custom-terraform-tasks.custom-terraform-release-task.TerraformTaskV3@3
+          displayName: 'Terraform  validate'
+          inputs:
+            command: validate
+            workingDirectory: terraform/source
+            commandOptions: '-no-color'
+        #===== Terraform Plan =====
+        - task: ms-devlabs.custom-terraform-tasks.custom-terraform-release-task.TerraformTaskV3@3
+          displayName: 'Terraform   plan'
+          inputs:
+            command: plan
+            workingDirectory: terraform/source
+        #===== Copy  files =====
+        - task: CopyFiles@2
+          displayName: 'Copy Files to directory'
+          inputs:
+            SourceFolder: terraform
+            Contents: |
+             */**
+             !*/*.terraform.lock.hcl
+             !*/*.terraform/**/*
+            TargetFolder: 'artifact'
+        #===== Publish Pipeline Artifact =====
+        - task: PublishPipelineArtifact@1
+          displayName: 'Publish Pipeline Artifact'
+          inputs:
+            targetPath: 'artifact'
+            artifact: 'terraform_app_drop'
+#===================================================== Release Pipeline ===========================================
+#===================================================== Release ========================================================
+    - stage: Release
+      displayName: Release            
+      # variables:
+      # - group: sm-terraform-release-1.1-variables 
+      jobs:
+      - deployment: linux_agent_job
+        pool:
+          vmImage: 'ubuntu-latest'   
+        environment: 'Release'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+              #===== install terraform =====
+              - task: ms-devlabs.custom-terraform-tasks.custom-terraform-installer-task.TerraformInstaller@0
+                displayName: "Install Terraform"
+                inputs:
+                  terraformVersion: '1.5.2'
+                  terraformDownloadLocation: 'https://releases.hashicorp.com/terraform'
+            #===== Azure Key Vault =====
+              # - task: AzureKeyVault@2
+              #   displayName: 'Key Vault Connection'
+              #   inputs:
+              #     azureSubscription: 'My ARM'
+              #     KeyVaultName: 'KeyForFirstrProject'
+              #     SecretsFilter: '*'
+              #     RunAsPreJob: true
+              #===== Terraform init =====
+              - task: ms-devlabs.custom-terraform-tasks.custom-terraform-release-task.TerraformTaskV3@3
+                displayName: 'Terraform  init'
+                inputs:
+                  command: 'init'
+                  provider: 'azurerm'
+                  commandOptions: '-input=false'
+                  workingDirectory: terraform/source
+                  backendServiceArm: 'NewServiceConnection'
+                  backendAzureRmResourceGroupName: 'MyRESOURCE'
+                  backendAzureRmStorageAccountName: mystorageaccounterraform
+                  backendAzureRmContainerName: 'tfstate'
+                  backendAzureRmKey: 'tf/terraform.tfstate'
+              #===== Terraform Validate =====
+              - task: ms-devlabs.custom-terraform-tasks.custom-terraform-release-task.TerraformTaskV3@3
+                displayName: 'Terraform  validate'
+                inputs:
+                  command: validate
+                  workingDirectory: 'terraform/source'
+                  commandOptions: '-no-color'
+              #===== Terraform apply =====
+              - task: ms-devlabs.custom-terraform-tasks.custom-terraform-release-task.TerraformTaskV3@3
+                displayName: 'Terraform  apply'
+                inputs:
+                  command: apply
+                  workingDirectory: 'terraform/source'
+                  commandOptions: '-no-color -auto-approve -var "access_token=$(StorageAccountAccessToken)"'
+                  # environmentServiceNameAzureRM: 'US Service Modernization US NONPROD'
+
