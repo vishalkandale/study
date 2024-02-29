@@ -1,0 +1,48 @@
+Problem Statement – The leading tank manufacturer in US wants to leverage Microsoft Fabric to build a modern cloud data platform.
+
+As a use case, they want a CXO level dashboard that will enable -
+
+1] User to know top 10 customer revenue and location wise
+2] Know tank details ordered by a particular customer
+3] Number of past inspections done on a particular tank
+4] Inspection reports (pdf, images, video)
+5] All of these will be available in single dashboard for getting deeper insight.
+
+Solution: Our solution aims at Fuelling Innovation and Data governance using Microsoft Fabric & AI. We created a Modern cloud data platform to enable seamless data integration, processing and analysis to drive operational excellence and innovation.
+
+Use case Scenario: 
+We have taken real world problem that we got from one of our customer
+Customer is a global leader in above-ground storage tank solutions provider having  60% market and headquartered in US.
+
+There operations run in typically with 3 service lines
+1] They do the manufacturing of tank)
+2] Repair and Maintenance
+3] Inspections (routine/ emergency/ out-of-service)
+
+Current challenges customer is facing –
+
+They collect the data from various platform like salesforce, ServiceNow, ADP etc.
+So there was a complete lack of integration they were not have centralise warehouse on which they can run there analytical workloads because of this there was huge loss of revenue and also absence of build in AI.
+
+What they wanted and what we proposed was actually Build a modern cloud data platform which leverage Microsoft Fabric it’s a new beast launch by Microsoft recently.
+We also wanted to give blue print of modern cloud data platform architecture which is a medallion Lakehouse architecture where you process the data in stages.
+We also wanted to give Unified View so we made semantic data layer.
+It also gives the unified data governance which is to do with security, lineage, quality etc.
+
+	• We gathered the requirement
+	• We got some sample data
+	• We kind build a blue print of whole medallion architecture 
+	• We build some dashboard that CXO would like
+
+	- We used azure Microsoft fabric
+	- In that data factory gives us prebuild connector to connect external source system
+	- Data would be landed into so called One Lake there we processed the data into different stages
+	- Storage comes in form of blob storage which id ADLS and the format that was being use is delta format which is kind of becoming the de facto standard assets property as well.
+
+Demo:
+	1. We have taken a sample data form the customer in CSV format and we used azure blob storage for external data source 
+	2. We created Lakehouse and add blob storage to that Lakehouse using shortcut (shortcut means we can create link path between fabric Lakehouse and cloud storage)
+	3. We created the pipeline where we injected the data from blob storage then using PySpark we processed the data so we have written Pyspark notebook that we collect the data, apply the schema, do some certain validation and we write the data into a warehouse which is in delta format.
+	4. Using those delta table we have created semantic model to create relationship between each of the table and also add required measure on which you can run reports
+	5. We have created Power Bi reports which CXO would love so they can get entire insights of their business operations. In that Report, we can see who are the Top 10 customers by revenue, what are the installation tank location, what is the overall revenue, how many inspections happens in specific tanks, details of tanks and inspections and we also using natural language query using Q & A so user can query in case of data is not visible into the report ( Its prebuild component within power Bi) and also we can slice or dice the data suppose you click on XYZ customer so you can see the location of their tanks, details of tanks and inspections and total revenues of that customer and you can get to see inspection report, image and videos
+
