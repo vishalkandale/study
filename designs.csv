@@ -1,0 +1,101 @@
+designID,tankID,constructionYear,installationDate,desginStandard,material,diameter,height,thickness,capacityGross,capcityNominal,operatingHeight,gemoertryDetails,comments
+D_000001,T_000001,2018,3/23/18,API 650,Carbon Steel(A-36),109.00 ft,64.96 ft,0.761 in,107960 bbls,103043 bbls,62.00 ft,Concrete Ringwall Foundation,Initial design
+D_000002,T_000002,2019,6/11/19,API 620,Stainless Steel,98.50 ft,72.80 ft,0.648 in,85000 bbls,81321 bbls,65.00 ft,Concrete Slab Foundation,Upgrade design
+D_000003,T_000003,2020,11/29/20,API 653,Carbon Steel(A-36),115.00 ft,68.40 ft,0.812 in,120000 bbls,114913 bbls,70.00 ft,Steel Piled Foundation,Maintenance design
+D_000004,T_000004,2017,9/14/17,API 650,Aluminum,85.00 ft,60.20 ft,0.525 in,75000 bbls,72159 bbls,55.00 ft,Concrete Ringwall Foundation,New installation design
+D_000005,T_000005,2019,4/4/19,API 620,Carbon Steel(A-36),102.00 ft,62.80 ft,0.712 in,90000 bbls,86428 bbls,60.00 ft,Concrete Slab Foundation,Safety inspection design
+D_000006,T_000006,2018,7/20/18,API 653,Carbon Steel(A-36),108.00 ft,64.20 ft,0.732 in,100000 bbls,96031 bbls,65.00 ft,Steel Piled Foundation,Compliance audit design
+D_000007,T_000007,2020,10/10/20,API 650,Stainless Steel,115.00 ft,68.80 ft,0.801 in,110000 bbls,105728 bbls,70.00 ft,Concrete Ringwall Foundation,Structural analysis design
+D_000008,T_000008,2019,12/28/19,API 620,Carbon Steel(A-36),105.00 ft,63.50 ft,0.721 in,95000 bbls,91253 bbls,65.00 ft,Concrete Slab Foundation,Routine inspection design
+D_000009,T_000009,2018,5/15/18,API 653,Aluminum,90.00 ft,61.00 ft,0.532 in,80000 bbls,76845 bbls,55.00 ft,Steel Piled Foundation,Upgrade design
+D_000010,T_000010,2019,4/4/19,API 650,Carbon Steel(A-36),112.00 ft,66.80 ft,0.742 in,105000 bbls,100765 bbls,68.00 ft,Concrete Ringwall Foundation,Safety check design
+D_000011,T_000011,2018,3/23/18,API 620,Stainless Steel,118.00 ft,70.20 ft,0.812 in,115000 bbls,110239 bbls,72.00 ft,Concrete Slab Foundation,Annual maintenance design
+D_000012,T_000012,2019,6/11/19,API 653,Carbon Steel(A-36),103.00 ft,61.40 ft,0.702 in,92000 bbls,88267 bbls,63.00 ft,Steel Piled Foundation,Pressure test design
+D_000013,T_000013,2021,11/29/21,API 650,Aluminum,110.00 ft,66.80 ft,0.772 in,108000 bbls,103679 bbls,70.00 ft,Concrete Ringwall Foundation,Initial design
+D_000014,T_000014,2019,9/14/19,API 620,Carbon Steel(A-36),99.50 ft,73.80 ft,0.648 in,86000 bbls,82321 bbls,65.00 ft,Concrete Slab Foundation,Upgrade design
+D_000015,T_000015,2020,4/4/20,API 653,Stainless Steel,116.00 ft,69.40 ft,0.832 in,125000 bbls,119913 bbls,70.00 ft,Steel Piled Foundation,Maintenance design
+D_000016,T_000016,2021,7/20/21,API 650,Carbon Steel(A-36),86.00 ft,61.20 ft,0.525 in,76000 bbls,73159 bbls,55.00 ft,Concrete Ringwall Foundation,New installation design
+D_000017,T_000017,2020,10/10/20,API 620,Aluminum,103.00 ft,63.80 ft,0.722 in,91000 bbls,87428 bbls,60.00 ft,Concrete Slab Foundation,Safety inspection design
+D_000018,T_000018,2019,12/28/19,API 653,Carbon Steel(A-36),109.00 ft,65.20 ft,0.732 in,101000 bbls,97031 bbls,65.00 ft,Steel Piled Foundation,Compliance audit design
+D_000019,T_000019,2022,2/14/22,API 650,Stainless Steel,116.00 ft,69.80 ft,0.801 in,111000 bbls,106728 bbls,70.00 ft,Concrete Ringwall Foundation,Structural analysis design
+D_000020,T_000020,2022,3/22/22,API 620,Carbon Steel(A-36),106.00 ft,64.50 ft,0.721 in,96000 bbls,92253 bbls,65.00 ft,Concrete Slab Foundation,Routine inspection design
+D_000021,T_000021,2023,4/23/23,API 653,Aluminum,91.00 ft,62.50 ft,0.532 in,81000 bbls,77845 bbls,55.00 ft,Steel Piled Foundation,Upgrade design
+D_000022,T_000022,2023,5/30/23,API 650,Carbon Steel(A-36),113.00 ft,67.80 ft,0.742 in,106000 bbls,101765 bbls,68.00 ft,Concrete Ringwall Foundation,Safety check design
+D_000023,T_000023,2023,6/4/23,API 620,Stainless Steel,119.00 ft,71.20 ft,0.812 in,116000 bbls,111239 bbls,72.00 ft,Concrete Slab Foundation,Annual maintenance design
+D_000024,T_000024,2023,7/10/23,API 653,Carbon Steel(A-36),104.00 ft,62.40 ft,0.702 in,93000 bbls,89267 bbls,63.00 ft,Steel Piled Foundation,Pressure test design
+D_000025,T_000025,2023,8/14/23,API 650,Aluminum,111.00 ft,67.80 ft,0.772 in,109000 bbls,104679 bbls,70.00 ft,Concrete Ringwall Foundation,Initial design
+D_000026,T_000026,2023,9/19/23,API 620,Carbon Steel(A-36),100.50 ft,74.80 ft,0.648 in,87000 bbls,83321 bbls,65.00 ft,Concrete Slab Foundation,Upgrade design
+D_000027,T_000027,2023,10/25/23,API 653,Stainless Steel,117.00 ft,70.40 ft,0.832 in,126000 bbls,120913 bbls,70.00 ft,Steel Piled Foundation,Maintenance design
+D_000028,T_000028,2023,11/29/23,API 650,Carbon Steel(A-36),87.00 ft,62.20 ft,0.525 in,77000 bbls,74159 bbls,55.00 ft,Concrete Ringwall Foundation,New installation design
+D_000029,T_000029,2023,12/5/23,API 620,Aluminum,104.00 ft,64.80 ft,0.722 in,92000 bbls,88428 bbls,60.00 ft,Concrete Slab Foundation,Safety inspection design
+D_000030,T_000030,2023,1/9/23,API 653,Carbon Steel(A-36),110.00 ft,66.20 ft,0.732 in,102000 bbls,98031 bbls,65.00 ft,Steel Piled Foundation,Compliance audit design
+D_000031,T_000031,2019,3/28/19,API 650,Stainless Steel,117.00 ft,70.80 ft,0.801 in,112000 bbls,107728 bbls,70.00 ft,Concrete Ringwall Foundation,Structural analysis design
+D_000032,T_000032,2020,6/15/20,API 620,Carbon Steel(A-36),107.00 ft,65.50 ft,0.721 in,97000 bbls,93253 bbls,65.00 ft,Concrete Slab Foundation,Routine inspection design
+D_000033,T_000033,2021,12/4/21,API 653,Aluminum,92.00 ft,63.50 ft,0.532 in,82000 bbls,78845 bbls,55.00 ft,Steel Piled Foundation,Upgrade design
+D_000034,T_000034,2018,9/19/18,API 650,Carbon Steel(A-36),114.00 ft,68.80 ft,0.742 in,107000 bbls,102765 bbls,68.00 ft,Concrete Ringwall Foundation,Safety check design
+D_000035,T_000035,2020,4/8/20,API 620,Stainless Steel,120.00 ft,72.20 ft,0.812 in,117000 bbls,112239 bbls,72.00 ft,Concrete Slab Foundation,Annual maintenance design
+D_000036,T_000036,2019,7/25/19,API 653,Carbon Steel(A-36),105.00 ft,63.40 ft,0.702 in,94000 bbls,90267 bbls,63.00 ft,Steel Piled Foundation,Pressure test design
+D_000037,T_000037,2021,10/15/21,API 650,Aluminum,112.00 ft,68.80 ft,0.772 in,110000 bbls,105679 bbls,70.00 ft,Concrete Ringwall Foundation,Initial design
+D_000038,T_000038,2021,1/1/21,API 620,Carbon Steel(A-36),101.50 ft,75.80 ft,0.648 in,88000 bbls,84321 bbls,65.00 ft,Concrete Slab Foundation,Upgrade design
+D_000039,T_000039,2019,5/20/19,API 653,Stainless Steel,118.00 ft,71.40 ft,0.832 in,127000 bbls,121913 bbls,70.00 ft,Steel Piled Foundation,Maintenance design
+D_000040,T_000040,2020,4/8/20,API 650,Carbon Steel(A-36),88.00 ft,63.20 ft,0.525 in,78000 bbls,75159 bbls,55.00 ft,Concrete Ringwall Foundation,New installation design
+D_000041,T_000041,2019,3/28/19,API 620,Aluminum,105.00 ft,65.80 ft,0.722 in,93000 bbls,89428 bbls,60.00 ft,Concrete Slab Foundation,Safety inspection design
+D_000042,T_000042,2020,6/15/20,API 653,Carbon Steel(A-36),111.00 ft,67.20 ft,0.732 in,103000 bbls,99031 bbls,65.00 ft,Steel Piled Foundation,Compliance audit design
+D_000043,T_000043,2022,12/4/22,API 650,Stainless Steel,118.00 ft,71.80 ft,0.801 in,113000 bbls,108728 bbls,70.00 ft,Concrete Ringwall Foundation,Structural analysis design
+D_000044,T_000044,2020,9/18/20,API 620,Carbon Steel(A-36),108.00 ft,66.50 ft,0.721 in,98000 bbls,94253 bbls,65.00 ft,Concrete Slab Foundation,Routine inspection design
+D_000045,T_000045,2021,4/9/21,API 653,Aluminum,93.00 ft,64.50 ft,0.532 in,83000 bbls,79845 bbls,55.00 ft,Steel Piled Foundation,Upgrade design
+D_000046,T_000046,2022,7/25/22,API 650,Carbon Steel(A-36),115.00 ft,69.80 ft,0.742 in,108000 bbls,103765 bbls,68.00 ft,Concrete Ringwall Foundation,Safety check design
+D_000047,T_000047,2021,10/15/21,API 620,Stainless Steel,121.00 ft,73.20 ft,0.812 in,118000 bbls,113239 bbls,72.00 ft,Concrete Slab Foundation,Annual maintenance design
+D_000048,T_000048,2021,1/1/21,API 653,Carbon Steel(A-36),106.00 ft,64.40 ft,0.702 in,95000 bbls,91267 bbls,63.00 ft,Steel Piled Foundation,Pressure test design
+D_000049,T_000049,2023,2/19/23,API 650,Aluminum,113.00 ft,69.80 ft,0.772 in,111000 bbls,106679 bbls,70.00 ft,Concrete Ringwall Foundation,Initial design
+D_000050,T_000050,2023,3/27/23,API 620,Carbon Steel(A-36),102.50 ft,76.80 ft,0.648 in,89000 bbls,85321 bbls,65.00 ft,Concrete Slab Foundation,Upgrade design
+D_000051,T_000051,2023,4/28/23,API 653,Stainless Steel,119.00 ft,72.40 ft,0.832 in,128000 bbls,122913 bbls,70.00 ft,Steel Piled Foundation,Maintenance design
+D_000052,T_000052,2023,6/3/23,API 650,Carbon Steel(A-36),89.00 ft,64.20 ft,0.525 in,79000 bbls,76159 bbls,55.00 ft,Concrete Ringwall Foundation,New installation design
+D_000053,T_000053,2023,6/8/23,API 620,Aluminum,106.00 ft,66.80 ft,0.722 in,94000 bbls,90428 bbls,60.00 ft,Concrete Slab Foundation,Safety inspection design
+D_000054,T_000054,2023,7/14/23,API 653,Carbon Steel(A-36),112.00 ft,68.20 ft,0.732 in,104000 bbls,100031 bbls,65.00 ft,Steel Piled Foundation,Compliance audit design
+D_000055,T_000055,2023,8/18/23,API 650,Stainless Steel,119.00 ft,72.80 ft,0.801 in,114000 bbls,109728 bbls,70.00 ft,Concrete Ringwall Foundation,Structural analysis design
+D_000056,T_000056,2023,9/23/23,API 620,Carbon Steel(A-36),109.00 ft,67.50 ft,0.721 in,99000 bbls,95253 bbls,65.00 ft,Concrete Slab Foundation,Routine inspection design
+D_000057,T_000057,2023,10/29/23,API 653,Aluminum,94.00 ft,65.50 ft,0.532 in,84000 bbls,80845 bbls,55.00 ft,Steel Piled Foundation,Upgrade design
+D_000058,T_000058,2023,12/3/23,API 650,Carbon Steel(A-36),116.00 ft,70.80 ft,0.742 in,109000 bbls,104765 bbls,68.00 ft,Concrete Ringwall Foundation,Safety check design
+D_000059,T_000059,2023,12/9/23,API 620,Stainless Steel,122.00 ft,74.20 ft,0.812 in,119000 bbls,114239 bbls,72.00 ft,Concrete Slab Foundation,Annual maintenance design
+D_000060,T_000060,2024,1/13/24,API 653,Carbon Steel(A-36),107.00 ft,65.40 ft,0.702 in,96000 bbls,92267 bbls,63.00 ft,Steel Piled Foundation,Pressure test design
+D_000061,T_000061,2018,6/1/18,API 650,Aluminum,114.00 ft,70.80 ft,0.772 in,112000 bbls,107679 bbls,70.00 ft,Concrete Ringwall Foundation,Initial design
+D_000062,T_000062,2019,8/20/19,API 620,Carbon Steel(A-36),103.50 ft,77.80 ft,0.648 in,90000 bbls,86321 bbls,65.00 ft,Concrete Slab Foundation,Upgrade design
+D_000063,T_000063,2021,2/7/21,API 653,Stainless Steel,120.00 ft,73.40 ft,0.832 in,129000 bbls,123913 bbls,70.00 ft,Steel Piled Foundation,Maintenance design
+D_000064,T_000064,2017,11/23/17,API 650,Carbon Steel(A-36),90.00 ft,65.20 ft,0.525 in,80000 bbls,77159 bbls,55.00 ft,Concrete Ringwall Foundation,New installation design
+D_000065,T_000065,2019,6/13/19,API 620,Aluminum,107.00 ft,67.80 ft,0.722 in,95000 bbls,91428 bbls,60.00 ft,Concrete Slab Foundation,Safety inspection design
+D_000066,T_000066,2018,9/28/18,API 653,Carbon Steel(A-36),113.00 ft,68.20 ft,0.732 in,105000 bbls,101031 bbls,65.00 ft,Steel Piled Foundation,Compliance audit design
+D_000067,T_000067,2020,12/19/20,API 650,Stainless Steel,120.00 ft,73.80 ft,0.801 in,115000 bbls,110728 bbls,70.00 ft,Concrete Ringwall Foundation,Structural analysis design
+D_000068,T_000068,2020,3/7/20,API 620,Carbon Steel(A-36),110.00 ft,67.50 ft,0.721 in,100000 bbls,96253 bbls,65.00 ft,Concrete Slab Foundation,Routine inspection design
+D_000069,T_000069,2018,7/23/18,API 653,Aluminum,95.00 ft,65.50 ft,0.532 in,85000 bbls,81845 bbls,55.00 ft,Steel Piled Foundation,Upgrade design
+D_000070,T_000070,2019,6/13/19,API 650,Carbon Steel(A-36),117.00 ft,71.80 ft,0.742 in,110000 bbls,105765 bbls,68.00 ft,Concrete Ringwall Foundation,Safety check design
+D_000071,T_000071,2018,6/1/18,API 620,Stainless Steel,123.00 ft,74.20 ft,0.812 in,120000 bbls,115239 bbls,72.00 ft,Concrete Slab Foundation,Annual maintenance design
+D_000072,T_000072,2019,8/20/19,API 653,Carbon Steel(A-36),108.00 ft,65.40 ft,0.702 in,97000 bbls,93267 bbls,63.00 ft,Steel Piled Foundation,Pressure test design
+D_000073,T_000073,2022,2/7/22,API 650,Aluminum,115.00 ft,71.80 ft,0.772 in,113000 bbls,108679 bbls,70.00 ft,Concrete Ringwall Foundation,Initial design
+D_000074,T_000074,2019,11/23/19,API 620,Carbon Steel(A-36),104.50 ft,78.80 ft,0.648 in,91000 bbls,87321 bbls,65.00 ft,Concrete Slab Foundation,Upgrade design
+D_000075,T_000075,2020,6/13/20,API 653,Stainless Steel,121.00 ft,74.40 ft,0.832 in,130000 bbls,124913 bbls,70.00 ft,Steel Piled Foundation,Maintenance design
+D_000076,T_000076,2021,9/28/21,API 650,Carbon Steel(A-36),91.00 ft,65.20 ft,0.525 in,81000 bbls,78159 bbls,55.00 ft,Concrete Ringwall Foundation,New installation design
+D_000077,T_000077,2020,12/19/20,API 620,Aluminum,108.00 ft,68.80 ft,0.722 in,96000 bbls,92428 bbls,60.00 ft,Concrete Slab Foundation,Safety inspection design
+D_000078,T_000078,2020,3/7/20,API 653,Carbon Steel(A-36),114.00 ft,69.20 ft,0.732 in,106000 bbls,102031 bbls,65.00 ft,Steel Piled Foundation,Compliance audit design
+D_000079,T_000079,2022,4/25/22,API 650,Stainless Steel,121.00 ft,74.80 ft,0.801 in,116000 bbls,111728 bbls,70.00 ft,Concrete Ringwall Foundation,Structural analysis design
+D_000080,T_000080,2022,5/31/22,API 620,Carbon Steel(A-36),111.00 ft,68.50 ft,0.721 in,101000 bbls,97253 bbls,65.00 ft,Concrete Slab Foundation,Routine inspection design
+D_000081,T_000081,2023,7/3/23,API 653,Aluminum,96.00 ft,66.50 ft,0.532 in,86000 bbls,82845 bbls,55.00 ft,Steel Piled Foundation,Upgrade design
+D_000082,T_000082,2023,8/8/23,API 650,Carbon Steel(A-36),118.00 ft,72.80 ft,0.742 in,111000 bbls,106765 bbls,68.00 ft,Concrete Ringwall Foundation,Safety check design
+D_000083,T_000083,2023,8/13/23,API 620,Stainless Steel,124.00 ft,75.20 ft,0.812 in,121000 bbls,116239 bbls,72.00 ft,Concrete Slab Foundation,Annual maintenance design
+D_000084,T_000084,2023,9/18/23,API 653,Carbon Steel(A-36),109.00 ft,65.40 ft,0.702 in,98000 bbls,94267 bbls,63.00 ft,Steel Piled Foundation,Pressure test design
+D_000085,T_000085,2023,10/23/23,API 650,Aluminum,116.00 ft,71.80 ft,0.772 in,114000 bbls,109679 bbls,70.00 ft,Concrete Ringwall Foundation,Initial design
+D_000086,T_000086,2023,11/28/23,API 620,Carbon Steel(A-36),105.50 ft,79.80 ft,0.648 in,92000 bbls,88321 bbls,65.00 ft,Concrete Slab Foundation,Upgrade design
+D_000087,T_000087,2023,1/3/23,API 653,Stainless Steel,122.00 ft,74.40 ft,0.832 in,131000 bbls,125913 bbls,70.00 ft,Steel Piled Foundation,Maintenance design
+D_000088,T_000088,2023,2/7/23,API 650,Carbon Steel(A-36),92.00 ft,65.20 ft,0.525 in,82000 bbls,79159 bbls,55.00 ft,Concrete Ringwall Foundation,New installation design
+D_000089,T_000089,2023,2/13/23,API 620,Aluminum,109.00 ft,68.80 ft,0.722 in,97000 bbls,93428 bbls,60.00 ft,Concrete Slab Foundation,Safety inspection design
+D_000090,T_000090,2023,3/19/23,API 653,Carbon Steel(A-36),115.00 ft,69.20 ft,0.732 in,107000 bbls,103031 bbls,65.00 ft,Steel Piled Foundation,Compliance audit design
+D_000091,T_000091,2018,9/9/18,API 650,Stainless Steel,122.00 ft,75.80 ft,0.801 in,117000 bbls,112728 bbls,70.00 ft,Concrete Ringwall Foundation,Structural analysis design
+D_000092,T_000092,2019,11/28/19,API 620,Carbon Steel(A-36),112.00 ft,68.50 ft,0.721 in,102000 bbls,98253 bbls,65.00 ft,Concrete Slab Foundation,Routine inspection design
+D_000093,T_000093,2021,5/18/21,API 653,Aluminum,97.00 ft,66.50 ft,0.532 in,87000 bbls,83845 bbls,55.00 ft,Steel Piled Foundation,Upgrade design
+D_000094,T_000094,2018,3/3/18,API 650,Carbon Steel(A-36),119.00 ft,73.80 ft,0.742 in,112000 bbls,107765 bbls,68.00 ft,Concrete Ringwall Foundation,Safety check design
+D_000095,T_000095,2019,9/21/19,API 620,Stainless Steel,125.00 ft,75.20 ft,0.812 in,122000 bbls,117239 bbls,72.00 ft,Concrete Slab Foundation,Annual maintenance design
+D_000096,T_000096,2019,1/6/19,API 653,Carbon Steel(A-36),110.00 ft,66.40 ft,0.702 in,99000 bbls,95267 bbls,63.00 ft,Steel Piled Foundation,Pressure test design
+D_000097,T_000097,2021,3/29/21,API 650,Aluminum,117.00 ft,72.80 ft,0.772 in,115000 bbls,110679 bbls,70.00 ft,Concrete Ringwall Foundation,Initial design
+D_000098,T_000098,2020,6/15/20,API 620,Carbon Steel(A-36),106.50 ft,80.80 ft,0.648 in,93000 bbls,89321 bbls,65.00 ft,Concrete Slab Foundation,Upgrade design
+D_000099,T_000099,2018,11/1/18,API 653,Stainless Steel,123.00 ft,75.40 ft,0.832 in,132000 bbls,126913 bbls,70.00 ft,Steel Piled Foundation,Maintenance design
+D_000100,T_000100,2019,9/21/19,API 650,Carbon Steel(A-36),93.00 ft,65.20 ft,0.525 in,83000 bbls,80159 bbls,55.00 ft,Concrete Ringwall Foundation,New installation design

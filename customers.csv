@@ -1,0 +1,31 @@
+companyID,compnayName,companyAddress,country,contactName,phone,eMail,orderDate,salesPerson,region,comments
+C_000001,ABC Corporation,"123 Main Street, Anytown, USA, 12345",USA,John Smith,123-456-7890,john.smith@example.com,2/21/18,John Hadely,North America,New order
+C_000002,XYZ Industries,"456 Oak Avenue, Springfield, USA, 54321",USA,Emily Davis,456-789-0123,emily.davis@example.com,5/12/19,Michael Brown,North America,New contract
+C_000003,Smith Manufacturing,"789 Maple Drive, Smalltown, USA, 67890",USA,David Wilson,789-012-3456,david.wilson@example.com,10/30/20,Jennifer Lee,North America,Renewal
+C_000004,Johnson Enterprises,"321 Pine Street, Bigcity, USA, 98765",USA,Emma Rodriguez,234-567-8901,emma.rodriguez@example.com,8/15/17,Robert Johnson,North America,Follow-up
+C_000005,Green Solutions,"654 Elm Street, Riverside, USA, 54321",USA,Noah Taylor,567-890-1234,noah.taylor@example.com,3/5/19,Pierre Dubois,North America,Expansion
+C_000006,Miller & Sons,"987 Cedar Avenue, Lakeside, USA, 13579",USA,Sophia Moore,890-123-4567,sophia.moore@example.com,6/20/18,Maria Schneider,North America,New market
+C_000007,Brown Enterprises,"159 Walnut Street, Mountainview, USA, 97531",USA,James Lee,012-345-6789,james.lee@example.com,9/10/20,Ana Torres,North America,Expansion
+C_000008,Taylor Manufacturing,"753 Cherry Drive, Oceanview, USA, 24680",USA,Charlotte White,345-678-9012,charlotte.white@example.com,11/28/19,Sarah Smith,North America,New project
+C_000009,Wilson Corporation,"369 Birch Lane, Hillside, USA, 86420",USA,Liam Hall,678-901-2345,liam.hall@example.com,4/15/18,Andrew Thompson,North America,Upgrade
+C_000010,Johnson & Sons,"852 Pineapple Road, Valleyview, USA, 74102",USA,Ethan Clark,901-234-5678,ethan.clark@example.com,3/5/19,Pierre Dubois,North America,Expansion
+C_000011,Martinez Solutions,"147 Coconut Avenue, Sunset, USA, 25846",USA,Mia Lewis,234-567-8901,mia.lewis@example.com,2/21/18,John Hadely,North America,New order
+C_000012,Davis Enterprises,"963 Banana Drive, Sunrise, USA, 36985",USA,Amelia Walker,567-890-1234,amelia.walker@example.com,5/12/19,Michael Brown,North America,New contract
+C_000013,Brown & Sons,"258 Grapefruit Lane, Moonlight, USA, 74185",USA,Isabella Hill,890-123-4567,isabella.hill@example.com,10/30/21,Jennifer Lee,North America,Renewal
+C_000014,Lee Manufacturing,"741 Peach Street, Starlight, USA, 14789",USA,William Baker,012-345-6789,william.baker@example.com,8/15/19,Robert Johnson,North America,Follow-up
+C_000015,Garcia Corporation,"369 Pear Drive, Daylight, USA, 36925",USA,Ella Cook,345-678-9012,ella.cook@example.com,3/5/20,Pierre Dubois,North America,Expansion
+C_000016,Rodriguez Solutions,"852 Orange Lane, Twilight, USA, 36982",USA,Sebastian Torres,678-901-2345,sebastian.torres@example.com,6/20/21,Maria Schneider,North America,New market
+C_000017,Hernandez Enterprises,"147 Lemon Avenue, Dawn, USA, 96325",USA,Scarlett Scott,901-234-5678,scarlett.scott@example.com,9/10/20,Ana Torres,North America,Expansion
+C_000018,Young Manufacturing,"963 Lime Street, Dusk, USA, 85214",USA,Henry Green,234-567-8901,henry.green@example.com,11/28/19,Sarah Smith,North America,New project
+C_000019,King & Sons,"258 Apple Drive, Sunshine, USA, 74136",USA,Grace Perez,567-890-1234,grace.perez@example.com,1/15/22,Andrew Thompson,North America,Upgrade
+C_000020,Wright Corporation,"741 Banana Lane, Moonshine, USA, 25874",USA,Leo King,890-123-4567,leo.king@example.com,2/20/22,Pierre Dubois,North America,Expansion
+C_000021,Clark Solutions,"369 Coconut Street, Starshine, USA, 96314",USA,Luna Baker,012-345-6789,luna.baker@example.com,3/25/23,John Hadely,North America,New order
+C_000022,Walker Enterprises,"852 Grapefruit Drive, Sunlight, USA, 74165",USA,Elliot Allen,345-678-9012,elliot.allen@example.com,4/30/23,Michael Brown,North America,New contract
+C_000023,Baker Manufacturing,"147 Peach Lane, Raindrop, USA, 36914",USA,Nova Scott,678-901-2345,nova.scott@example.com,5/5/23,Jennifer Lee,North America,Renewal
+C_000024,Cook Corporation,"963 Pear Street, Rainbow, USA, 85263",USA,Mateo Green,901-234-5678,mateo.green@example.com,6/10/23,Robert Johnson,North America,Follow-up
+C_000025,Allen & Sons,"741 Orange Avenue, Thunderstorm, USA, 14785",USA,Aurora Hill,234-567-8901,aurora.hill@example.com,7/15/23,Pierre Dubois,North America,Expansion
+C_000026,Torres Solutions,"369 Lime Drive, Snowfall, USA, 96321",USA,Hazel King,567-890-1234,hazel.king@example.com,8/20/23,Maria Schneider,North America,New market
+C_000027,Scott Enterprises,"852 Lemon Street, Hailstorm, USA, 36985",USA,Amara Cook,890-123-4567,amara.cook@example.com,9/25/23,Ana Torres,North America,Expansion
+C_000028,Perez Manufacturing,"147 Apple Avenue, Blizzard, USA, 85236",USA,Eli Green,012-345-6789,eli.green@example.com,10/30/23,Sarah Smith,North America,New project
+C_000029,Martin Corporation,"963 Banana Drive, Tornado, USA, 74169",USA,Liam Hill,345-678-9012,liam.hill@example.com,11/5/23,Andrew Thompson,North America,Upgrade
+C_000030,Young & Sons,"741 Coconut Lane, Hurricane, USA, 25874",USA,Millie Perez,678-901-2345,millie.perez@example.com,12/10/23,Pierre Dubois,North America,Expansion
