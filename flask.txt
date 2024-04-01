@@ -1,0 +1,177 @@
+I am providing my all flask_app code using rabbitmq celery and mongodb
+APP folder - flask_app
+					-	app.py
+					- requirements.txt
+					- task.py
+					- Dockerfile
+                 - docker-compose.yml
+				 
+I will provide all code one by one
+
+1] docker-compose.yml: 
+version: "3.7"
+
+services:
+  flask_app:
+    container_name: flask
+    build: ./flask_app
+    ports:
+      - "5002:5002"
+      - "80:80"
+    links:
+      - rabbit
+    depends_on:
+      - rabbit
+      - worker
+
+  rabbit:
+    hostname: rabbit
+    image: "rabbitmq:3.12.13-management"
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+
+  worker:
+    build:
+      context: ./flask_app
+    entrypoint: celery
+    command: -A tasks worker --loglevel=INFO
+
+    links:
+      - rabbit
+    depends_on:
+      - rabbit
+
+2] Dockerfile:
+
+FROM python:3.10.12
+
+WORKDIR /code
+
+COPY . /code
+RUN pip install -r requirements.txt
+RUN python -m pip install "pymongo[srv]"
+
+#ENV FLASK_ENV=development
+CMD [ "python", "./app.py" ]
+
+
+3] app.py
+
+# Import necessary modules from Flask, Celery, and other related modules
+from flask import Flask, request, jsonify
+from tasks import add
+from celery import Celery
+from celery.result import AsyncResult
+
+# Create a Flask app instance
+app = Flask(__name__)
+# Create a Celery instance named 'celery_app'
+celery_app = Celery('tasks', broker='amqp://guest:guest@rabbit:5672')
+
+# Configure Celery settings
+celery_app.conf.update(
+    # Configure the result backend using Mongodb
+    CELERY_RESULT_BACKEND='mongodb+srv://',
+
+    # Set the task serializer to JSON
+    # broker_pool_limit=0,
+    CELERY_TASK_SERIALIZER='json',
+
+    # Do not ignore results (set to False)
+    CELERY_IGNORE_RESULT=False,
+)
+
+
+# Define a route for adding data using a POST request
+@app.route('/add', methods=['POST'])
+def adddata():
+    try:
+        # Extract data from JSON request
+        data = request.get_json()
+        x = data['x']
+        y = data['y']
+
+        # Call the 'add' task asynchronously and get the result object
+        result = add.delay(x, y)
+
+        # Return the task ID as a JSON response
+        return jsonify({'Task ID': result.id})
+    except Exception as e:
+        return jsonify({'error': str(e)})
+
+
+# Define a route for getting the status of a task
+@app.route('/getstatus/<task_id>')
+def gettaskstatus(task_id):
+    try:
+        # Get the status of the task using the task ID
+        task_status = celery_app.AsyncResult(task_id).status
+
+        # Return the task status as a JSON response
+        return jsonify({'Task Status': task_status})
+    except Exception as e:
+        return jsonify({'error': str(e)})
+
+
+# Define a route for getting the result of a completed task
+@app.route('/getdone/<task_id>')
+def getdone(task_id):
+    try:
+        # Get the result of the task using the task ID
+        task_result = celery_app.AsyncResult(task_id).result
+
+        # Return the task result as a JSON response
+        return jsonify({'Task Result': task_result})
+    except Exception as e:
+        return jsonify({'error': str(e)})
+
+
+# Run the Flask app in debug mode if executed directly
+if __name__ == '__main__':
+    app.run(debug=True)
+	
+	
+	
+4] tasks.py
+
+# Import the Celery library
+from celery import Celery
+
+# Import the time module for the sleep function
+import time
+
+# Create a Celery instance named 'app' mongodb+srv://admin:admin@cluster0.uqcr0kx.mongodb.net/
+app = Celery('tasks', backend='mongodb+srv://a, broker='amqp://guest:guest@rabbit:5672')
+
+# set brocker_connetion_retry_on_startup to True
+app.conf.brocker_connection_retry_on_startup = True
+
+# Define a Celery task named 'add'
+@app.task()
+def add(x, y):
+    # Simulate a delay of 25 seconds (for demonstration purposes)
+    time.sleep(25)
+
+    # Perform the addition operation
+    result = x + y
+
+    # Return the result of the addition
+    return result
+	
+5] requirements.txt 
+
+flask==2.2.2
+celery==5.2.3
+sqlalchemy
+pymongo==4.0.1
+Werkzeug==2.2.2
+pymongo[srv]
+
+
+
+Can you correct all file and add neccessory code
+	
